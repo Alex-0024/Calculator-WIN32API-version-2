@@ -9,3 +9,7 @@ This is a simple calculator for calculating common mathematical operations.
 - The project has four files: main.c, resource.h, resource.rc and iconCalc.ico.
 
 ![Image alt](https://github.com/Alex-0024/Calculator-WIN32API-version-2/blob/main/CalcShow_0.png)
+
+![Image alt](https://github.com/Alex-0024/Calculator-WIN32API-version-2/blob/main/CalcShow_1.png)
+
+![Image alt](https://github.com/Alex-0024/Calculator-WIN32API-version-2/blob/main/CalcShow_2.png)
