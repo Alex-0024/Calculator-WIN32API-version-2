@@ -8,4 +8,4 @@ This is a simple calculator for calculating common mathematical operations.
 - The calculator takes into account the location where the program was closed and opens it using the old coordinates (file - posWnd.txt).
 - The project has four files: main.c, resource.h, resource.rc and iconCalc.ico.
 
-![Image alt](https://github.com/Alex-0024/Calculator-WIN32API/blob/main/foto%20calculator.png)
+![Image alt](https://github.com/Alex-0024/Calculator-WIN32API-version-2/blob/main/CalcShow_0.png)
