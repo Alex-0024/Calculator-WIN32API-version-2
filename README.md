@@ -1,4 +1,3 @@
-# Calculator-WIN32API-version-2
 This is a simple calculator for calculating common mathematical operations.
 - The calculator allows you to enter numbers either using the mouse by clicking on buttons in the window, or using the keyboard.
 - You can also enter C (Esc), mathematical operations (+-/*), and return (BackSpace) from the keyboard.
