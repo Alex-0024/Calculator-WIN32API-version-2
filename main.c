@@ -29,10 +29,9 @@
 #define LITTLENUMIFKEY nIfKey(0); nIfKey(1); nIfKey(2); nIfKey(3); nIfKey(4);\
                        nIfKey(5); nIfKey(6); nIfKey(7); nIfKey(8); nIfKey(9)
 
-#define MAXNUMSIZE 200 // четные элементы для хранения чисел, нечетные для математического действия (200 это 100 математических действий подряд)
+#define MAXNUMSIZE 200 // Г·ГҐГІГ­Г»ГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ» Г¤Г«Гї ГµГ°Г Г­ГҐГ­ГЁГї Г·ГЁГ±ГҐГ«, Г­ГҐГ·ГҐГІГ­Г»ГҐ Г¤Г«Гї Г¬Г ГІГҐГ¬Г ГІГЁГ·ГҐГ±ГЄГ®ГЈГ® Г¤ГҐГ©Г±ГІГўГЁГї (200 ГЅГІГ® 100 Г¬Г ГІГҐГ¬Г ГІГЁГ·ГҐГ±ГЄГЁГµ Г¤ГҐГ©Г±ГІГўГЁГ© ГЇГ®Г¤Г°ГїГ¤)
                        // even elements for storing numbers, odd for mathematical operations (200 is 100 mathematical operations in a row)
 
-#define CLR_WND_BCG RGB(47,248,222)
 #define CLR_COLOR_BCG RGB(255, 255, 255)
 
 #define id_hSystemMenu_Color 100
@@ -268,7 +267,6 @@ LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
             if((HWND)lParam == bt_percent && countMasNum >=2)
             {
-                /* расчет суммы элементов до элемента в котором будут указаны проценты */
                 /* calculation of the sum of elements up to the element in which percentages will be indicated */
                 if(countMasNum >= 4)
                 {
@@ -282,7 +280,6 @@ LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                             res = funcMath(res, masNum[i+2], Func[(int)masNum[i+1]]);
                     }
                     countMasNum += 2;
-                    /* расчет вычисления по всем элементам с учетом расчета последнего элемента в процентах*/
                     /* calculation of calculations for all elements, taking into account the calculation of the last element as a percentage */
                     masNum[countMasNum] = res / 100.0 * masNum[countMasNum];
                     num = masNum[countMasNum];
@@ -294,7 +291,6 @@ LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                 }
                 else
                 {
-                    /* расчет вычисления по всем элементам с учетам расчета последнего элемента в процентах*/
                     /* calculation of calculations for all elements, taking into account the calculation of the last element as a percentage */
                     masNum[countMasNum] = masNum[countMasNum-2] / 100.0 * masNum[countMasNum];
                     num = masNum[countMasNum];
@@ -481,8 +477,7 @@ char* makeSpecificator(double a)
 
         char strSpecPrec[10] = "%.";
         char strNumSpecPrec[3] = {};
-        sprintf(strNumSpecPrec, "%d", (int)precision); // задание точности - количество знаков после запятой
-                                                       // precision assignment - number of digits after the decimal point
+        sprintf(strNumSpecPrec, "%d", (int)precision); // precision assignment - number of digits after the decimal point
         strcat(strSpecPrec, strNumSpecPrec);
         strcat(strSpecPrec, "f");
 
@@ -605,7 +600,7 @@ void CalcAndShowResultInputScreen()
     strcat(strInputScreen, "= ");
     strcat(strInputScreen, strNum);
     if(flagDivideZero)
-        strcat(strInputScreen, "\nyou can't divide by zero / на ноль делить нельзя");
+        strcat(strInputScreen, "\nyou can't divide by zero / РЅР° РЅРѕР»СЊ РґРµР»РёС‚СЊ РЅРµР»СЊР·СЏ");
     SetWindowText(inputScreen, strInputScreen);
 }
 
