@@ -29,7 +29,7 @@
 #define LITTLENUMIFKEY nIfKey(0); nIfKey(1); nIfKey(2); nIfKey(3); nIfKey(4);\
                        nIfKey(5); nIfKey(6); nIfKey(7); nIfKey(8); nIfKey(9)
 
-#define MAXNUMSIZE 200 // четные элементы для хранения чисел, нечетные для математического действия (200 это 100 математических действий подряд)
+#define MAXNUMSIZE 200 // Г·ГҐГІГ­Г»ГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ» Г¤Г«Гї ГµГ°Г Г­ГҐГ­ГЁГї Г·ГЁГ±ГҐГ«, Г­ГҐГ·ГҐГІГ­Г»ГҐ Г¤Г«Гї Г¬Г ГІГҐГ¬Г ГІГЁГ·ГҐГ±ГЄГ®ГЈГ® Г¤ГҐГ©Г±ГІГўГЁГї (200 ГЅГІГ® 100 Г¬Г ГІГҐГ¬Г ГІГЁГ·ГҐГ±ГЄГЁГµ Г¤ГҐГ©Г±ГІГўГЁГ© ГЇГ®Г¤Г°ГїГ¤)
                        // even elements for storing numbers, odd for mathematical operations (200 is 100 mathematical operations in a row)
 
 #define CLR_COLOR_BCG RGB(255, 255, 255)
@@ -263,7 +263,7 @@ LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
             if((HWND)lParam == bt_percent && countMasNum >=2)
             {
-                /* расчет суммы элементов до элемента в котором будут указаны проценты */
+                /* Г°Г Г±Г·ГҐГІ Г±ГіГ¬Г¬Г» ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г¤Г® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Гў ГЄГ®ГІГ®Г°Г®Г¬ ГЎГіГ¤ГіГІ ГіГЄГ Г§Г Г­Г» ГЇГ°Г®Г¶ГҐГ­ГІГ» */
                 /* calculation of the sum of elements up to the element in which percentages will be indicated */
                 if(countMasNum >= 4)
                 {
@@ -277,7 +277,7 @@ LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                             res = funcMath(res, masNum[i+2], Func[(int)masNum[i+1]]);
                     }
                     countMasNum += 2;
-                    /* расчет вычисления по всем элементам с учетом расчета последнего элемента в процентах*/
+                    /* Г°Г Г±Г·ГҐГІ ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГї ГЇГ® ГўГ±ГҐГ¬ ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ Г± ГіГ·ГҐГІГ®Г¬ Г°Г Г±Г·ГҐГІГ  ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Гў ГЇГ°Г®Г¶ГҐГ­ГІГ Гµ*/
                     /* calculation of calculations for all elements, taking into account the calculation of the last element as a percentage */
                     masNum[countMasNum] = res / 100.0 * masNum[countMasNum];
                     num = masNum[countMasNum];
@@ -289,7 +289,7 @@ LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                 }
                 else
                 {
-                    /* расчет вычисления по всем элементам с учетам расчета последнего элемента в процентах*/
+                    /* Г°Г Г±Г·ГҐГІ ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГї ГЇГ® ГўГ±ГҐГ¬ ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ Г± ГіГ·ГҐГІГ Г¬ Г°Г Г±Г·ГҐГІГ  ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Гў ГЇГ°Г®Г¶ГҐГ­ГІГ Гµ*/
                     /* calculation of calculations for all elements, taking into account the calculation of the last element as a percentage */
                     masNum[countMasNum] = masNum[countMasNum-2] / 100.0 * masNum[countMasNum];
                     num = masNum[countMasNum];
@@ -476,7 +476,7 @@ char* makeSpecificator(double a)
 
         char strSpecPrec[10] = "%.";
         char strNumSpecPrec[3] = {};
-        sprintf(strNumSpecPrec, "%d", (int)precision); // задание точности - количество знаков после запятой
+        sprintf(strNumSpecPrec, "%d", (int)precision); // Г§Г Г¤Г Г­ГЁГҐ ГІГ®Г·Г­Г®Г±ГІГЁ - ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г§Г­Г ГЄГ®Гў ГЇГ®Г±Г«ГҐ Г§Г ГЇГїГІГ®Г©
                                                        // precision assignment - number of digits after the decimal point
         strcat(strSpecPrec, strNumSpecPrec);
         strcat(strSpecPrec, "f");
@@ -594,7 +594,7 @@ void CalcAndShowResultInputScreen()
     }
     if(flagDivideZero)
     {
-        strcat(strInputScreen, "\nyou can't divide by zero / на ноль делить нельзя");
+        strcat(strInputScreen, "\nyou can't divide by zero / Г­Г  Г­Г®Г«Гј Г¤ГҐГ«ГЁГІГј Г­ГҐГ«ГјГ§Гї");
     }
     else
     {
