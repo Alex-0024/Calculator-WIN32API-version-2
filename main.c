@@ -594,7 +594,7 @@ void CalcAndShowResultInputScreen()
     }
     if(flagDivideZero)
     {
-        strcat(strInputScreen, "\nyou can't divide by zero / íà íîëü äåëèòü íåëüçÿ");
+        strcat(strInputScreen, "\nyou can't divide by zero / на ноль делить нельзя");
     }
     else
     {
